@@ -45,7 +45,7 @@ void chooseSorting(std::vector<Student>& students)
     switch (choice)
     {
         case 1:
-            
+
         break;
 
         case 2:
