@@ -54,3 +54,41 @@ void bubbleSort(std::vector<Student>& student)
         }
     }
 }
+
+void cocktailSort(std::vector<Student>& student)
+{
+    bool swapped = true;
+    size_t start = 0;
+    size_t end = student.size() - 1;
+
+    while (swapped)
+    {
+        swapped = false;
+
+        for (size_t i = start; i < end; i++)
+        {
+            if (student[i].grade > student[i + 1].grade)
+            {
+                std::swap(student[i], student[i + 1]);
+                swapped = true;
+            }
+        }
+
+        if (!swapped) break;
+
+        end--;
+
+        swapped = false;
+
+        for (size_t j = end; j > start; j--)
+        {
+            if (student[j].grade < student[j - 1].grade)
+            {
+                std::swap(student[j], student[j - 1]);
+                swapped = true;
+            }
+        }
+
+        start++;
+    }
+}
