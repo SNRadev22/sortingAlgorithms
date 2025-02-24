@@ -34,3 +34,23 @@ void selectionSort(std::vector<Student>& student)
         std::swap(student[minIndex], student[i]);
     }
 }
+
+void bubbleSort(std::vector<Student>& student)
+{
+    for(size_t i = 0; i < student.size() - 1; i++)
+    {
+        bool flag = false;
+        for(size_t j = 0; j < student.size() - i - 1; j++)
+        {
+            if(student[j].grade > student[j + 1].grade)
+            {
+                std::swap(student[j], student[j + 1]);
+                flag = true;
+            }
+        }
+        if(flag == false)
+        {
+            break;
+        }
+    }
+}

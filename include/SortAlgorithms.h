@@ -10,5 +10,6 @@
 
 void insertionSort(std::vector<Student>& student);
 void selectionSort(std::vector<Student>& student);
+void bubbleSort(std::vector<Student>& student);
 
 #endif //STUDENTSORTER_SORTALGORITHMS_H
