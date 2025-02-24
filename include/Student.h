@@ -1,8 +1,8 @@
-//
-// Created by GRIGS on 24.2.2025 г..
-//
+#pragma once
+#include<string>
 
-#ifndef STUDENT_H
-#define STUDENT_H
-
-#endif //STUDENT_H
+struct Student
+{
+    std::string name;
+    float grade;
+};
