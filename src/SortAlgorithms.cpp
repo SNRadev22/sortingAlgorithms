@@ -17,3 +17,20 @@ void insertionSort(std::vector<Student>& student)
         student[j + 1] = temp;
     }
 }
+
+void selectionSort(std::vector<Student>& student)
+{
+    size_t size = student.size();
+    for (size_t i = 0; i < size - 1; i++)
+    {
+        size_t minIndex = i;
+        for (size_t j = i + 1; j < size; j++)
+        {
+            if (student[j].grade < student[minIndex].grade)
+            {
+                minIndex = j;
+            }
+        }
+        std::swap(student[minIndex], student[i]);
+    }
+}
