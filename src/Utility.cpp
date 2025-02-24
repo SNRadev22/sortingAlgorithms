@@ -45,19 +45,19 @@ void chooseSorting(std::vector<Student>& students)
     switch (choice)
     {
         case 1:
-
+            insertionSort(students);
         break;
 
         case 2:
-
+            selectionSort(students);
         break;
 
         case 3:
-
+            bubbleSort(students);
         break;
 
         case 4:
-
+            cocktailSort(students);
         break;
 
         default:
